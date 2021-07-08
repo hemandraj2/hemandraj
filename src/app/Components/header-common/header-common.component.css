@@ -1,0 +1,88 @@
+.header_area{
+    width: 100%;
+    background-color: #1097b9;
+    float: left;
+}
+.header-common-area{
+    width: 100%;
+    float: left;
+    margin-top: 150px;
+}
+.header-item{
+    width: 25%;
+    margin: 25px 0px;
+    float: left;
+}
+.header-home-area,.header-about-area,.header-resume-area,.header-portfolio-area{
+    padding: 10px 20px;
+    float: left;
+}
+.header-nav-text{
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 600;
+    color: #f0f0f0;
+    text-align: center;
+    margin: 0px 0px 0px 10px;
+    float: left;
+    font-family: 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+}
+.home-icon{
+    background-image: url('../../../assets/img/home-icon.png');
+    width: 26px;
+    height: 26px;
+    background-size: cover;
+    margin: auto;
+    float: left;
+}
+.about-icon{
+    background-image: url('../../../assets/img/about-icon.png');
+    width: 26px;
+    height: 26px;
+    background-size: cover;
+    margin: auto;
+    float: left;
+}
+.resume-icon{
+    background-image: url('../../../assets/img/resume-icon.png');
+    width: 26px;
+    height: 26px;
+    background-size: cover;
+    margin: auto;
+    float: left;
+}
+.portfolio-icon{
+    background-image: url('../../../assets/img/portfolio-icon.png');
+    width: 26px;
+    height: 26px;
+    background-size: cover;
+    margin: auto;
+    float: left;
+}
+@media(max-width:991.98px){
+}
+@media(max-width:767.98px){
+    .header-home-area, .header-about-area, .header-resume-area, .header-portfolio-area{
+        padding: 5px 20px;
+    }
+    .header-item{
+        margin: 15px 0px;
+    }
+    .home-icon{
+        width: 22px;
+        height: 22px;
+    }
+    .about-icon{
+        width: 22px;
+        height: 22px;
+    }
+    .resume-icon{
+        width: 22px;
+        height: 22px;
+    }
+    .portfolio-icon{
+        width: 22px;
+        height: 22px;
+    }
+}

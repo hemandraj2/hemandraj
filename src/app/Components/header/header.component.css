@@ -1,0 +1,121 @@
+.float-left{
+    float: left;
+}
+.header-common-area{
+    width: 100%;
+    float: left;
+    margin-top: 150px;
+}
+.header-item{
+    width: 100%;
+    margin: 25px 0px;
+    float: left;
+}
+.header-home-text,.header-about-text,.header-resume-text,.header-portfolio-text{
+    display: none;
+}
+.header-home-area,.header-about-area,.header-resume-area,.header-portfolio-area{
+    background-color: #1097b9;
+    border-radius: 50px;
+    padding: 10px 20px;
+    float: left;
+}
+.header-home-area:hover,.header-about-area:hover,.header-resume-area:hover,.header-portfolio-area:hover{
+    background-color: #0a6279;
+}
+.header-home-area:hover .header-home-text{
+    display: block;
+}
+.header-about-area:hover .header-about-text{
+    display: block;
+}
+.header-resume-area:hover .header-resume-text{
+    display: block;
+}
+.header-portfolio-area:hover .header-portfolio-text{
+    display: block;
+}
+.header-nav-text{
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 600;
+    color: #f0f0f0;
+    text-align: center;
+    margin: 0px 0px 0px 10px;
+    float: left;
+    font-family: 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+}
+.home-icon{
+    background-image: url('../../../assets/img/home-icon.png');
+    width: 26px;
+    height: 26px;
+    background-size: cover;
+    margin: auto;
+    float: left;
+}
+.about-icon{
+    background-image: url('../../../assets/img/about-icon.png');
+    width: 26px;
+    height: 26px;
+    background-size: cover;
+    margin: auto;
+    float: left;
+}
+.resume-icon{
+    background-image: url('../../../assets/img/resume-icon.png');
+    width: 26px;
+    height: 26px;
+    background-size: cover;
+    margin: auto;
+    float: left;
+}
+.portfolio-icon{
+    background-image: url('../../../assets/img/portfolio-icon.png');
+    width: 26px;
+    height: 26px;
+    background-size: cover;
+    margin: auto;
+    float: left;
+}
+@media(max-width:991.98px){
+    .header-home-area:hover .header-home-text{
+        display: none;
+    }
+    .header-about-area:hover .header-about-text{
+        display: none;
+    }
+    .header-resume-area:hover .header-resume-text{
+        display: none;
+    }
+    .header-portfolio-area:hover .header-portfolio-text{
+        display: none;
+    }
+}
+@media(max-width:767.98px){
+    .header-common-area{
+        margin-top: 100px;
+    }
+    .header-item{
+        margin: 20px 0px;
+    }
+    .header-home-area,.header-about-area,.header-resume-area,.header-portfolio-area{
+        padding: 5px 10px;
+    }
+    .home-icon{
+        width: 22px;
+        height: 22px;
+    }
+    .about-icon{
+        width: 22px;
+        height: 22px;
+    }
+    .resume-icon{
+        width: 22px;
+        height: 22px;
+    }
+    .portfolio-icon{
+        width: 22px;
+        height: 22px;
+    }
+}

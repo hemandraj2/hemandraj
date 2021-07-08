@@ -1,0 +1,74 @@
+.datawrapper{
+    width: 100%;
+    float: left;
+    margin-top: 30%;
+}
+.personalname{
+    font-size: 52px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    color:#ad2911;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+.iamatext{
+    font-size: 28px;
+    font-weight: 500;
+    color:#ad2911;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+.roletext{
+    font-size: 28px;
+    font-weight: 500;
+    color:#1097b9;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+@media(max-width:1199.98px){
+    .datawrapper{
+        width: 100%;
+    }
+    .personalname{
+        font-size: 48px;
+    }
+    .iamatext{
+        font-size: 28px;
+    }
+    .roletext{
+        font-size: 28px;
+    }
+}
+@media(max-width:991.98px){
+    .datawrapper{
+        margin-top: 35%;
+    }
+    .personalname{
+        font-size: 44px;
+    }
+}
+@media(max-width:767.98px){
+    .datawrapper{
+        margin-top: 38%;
+    }
+    .personalname{
+        font-size: 30px;
+    }
+    .iamatext{
+        font-size: 24px;
+    }
+    .roletext{
+        font-size: 24px;
+    }
+}
+@media(max-width:545.98px){
+    .datawrapper{
+        margin-top: 45%;
+    }
+    .personalname{
+        font-size: 26px;
+    }
+    .iamatext{
+        font-size: 20px;
+    }
+    .roletext{
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,34 @@
+<app-header-common></app-header-common>
+<div class="resumecontent">
+    <div class="container">
+        <div class="col-md-12 col-sm-12 col-12 float-left">
+            <div class="resume-area-box">
+                <h1>My expertise</h1>
+                <div class="expertise_item" *ngFor="let item of expertise">
+                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-12 float-left">
+                        <span class="barback_width_100">
+                            <span [ngClass]="'bar_width_'+item.confidence"></span>
+                        </span>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 float-left">
+                        <h4>{{item.name}}</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="resume-area-box">
+                <h1>My experience</h1>
+
+                <div class="card-container" *ngFor="let expitem of experience">
+                    <div class="card">
+                        <div class="front">
+                            <h2 class="sub-title">{{expitem.period}}</h2>
+                            <h1 class="title">
+                                {{expitem.company}}
+                            </h1>
+                            <h2 class="sub-title">{{expitem.role}}</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

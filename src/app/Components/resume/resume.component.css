@@ -1,0 +1,299 @@
+.resumecontent{
+    width: 100%;
+    float: left;
+    background-color: #eeeeee;
+}
+.resume-area-box{
+    width: 100%;
+    float: left;
+    margin-top: 70px;
+}
+.bar_width_90{
+    width: 90%;
+    background-color: #c7b833;
+    float: left;
+    height: 23px;
+    border-radius: 12px 0px 0px 12px;
+    animation: progressBar90 3s ease-in-out;
+    animation-fill-mode:both; 
+}
+.bar_width_80{
+    width: 80%;
+    background-color: #c7b833;
+    float: left;
+    height: 23px;
+    border-radius: 12px 0px 0px 12px;
+    animation: progressBar80 3s ease-in-out;
+    animation-fill-mode:both;
+}
+.bar_width_70{
+    width: 70%;
+    background-color: #c7b833;
+    float: left;
+    height: 23px;
+    border-radius: 12px 0px 0px 12px;
+    animation: progressBar70 3s ease-in-out;
+    animation-fill-mode:both;
+}
+.bar_width_60{
+    width: 60%;
+    background-color: #c7b833;
+    float: left;
+    height: 23px;
+    border-radius: 12px 0px 0px 12px;
+    animation: progressBar60 3s ease-in-out;
+    animation-fill-mode:both;
+}
+.bar_width_50{
+    width: 50%;
+    background-color: #c7b833;
+    float: left;
+    height: 23px;
+    border-radius: 12px 0px 0px 12px;
+    animation: progressBar50 3s ease-in-out;
+    animation-fill-mode:both;
+}
+.bar_width_40{
+    width: 40%;
+    background-color: #c7b833;
+    float: left;
+    height: 23px;
+    border-radius: 12px 0px 0px 12px;
+    animation: progressBar40 3s ease-in-out;
+    animation-fill-mode:both;
+}
+.bar_width_30{
+    width: 30%;
+    background-color: #c7b833;
+    float: left;
+    height: 23px;
+    border-radius: 12px 0px 0px 12px;
+    animation: progressBar30 3s ease-in-out;
+    animation-fill-mode:both;
+}
+.bar_width_20{
+    width: 20%;
+    background-color: #c7b833;
+    float: left;
+    height: 23px;
+    border-radius: 12px 0px 0px 12px;
+    animation: progressBar20 3s ease-in-out;
+    animation-fill-mode:both;
+}
+@keyframes progressBar90 {
+  0% { width: 0; }
+  100% { width: 90%; }
+}
+@keyframes progressBar80 {
+    0% { width: 0; }
+    100% { width: 80%; }
+}
+@keyframes progressBar70 {
+    0% { width: 0; }
+    100% { width: 70%; }
+}
+@keyframes progressBar60 {
+    0% { width: 0; }
+    100% { width: 60%; }
+}
+@keyframes progressBar50 {
+    0% { width: 0; }
+    100% { width: 50%; }
+}
+@keyframes progressBar40 {
+    0% { width: 0; }
+    100% { width: 40%; }
+}
+@keyframes progressBar30 {
+    0% { width: 0; }
+    100% { width: 30%; }
+}
+@keyframes progressBar20 {
+    0% { width: 0; }
+    100% { width: 20%; }
+}
+.barback_width_100{
+    width: 100%;
+    border : 1px solid #1f1f1f;
+    float: left;
+    height: 25px;
+    border-radius: 12px;
+}
+.expertise_item{
+    width: 100%;
+    float: left;
+    margin-top:30px;
+    margin-bottom: 25px;
+}
+
+/*Expiernece card switch*/
+  
+.card-container {
+    perspective: 1000;
+    margin: 0 auto 50px;
+    width: 31%;
+    margin: 5% 1%;
+    float: left;
+}
+.front {
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 30px;
+    box-sizing: border-box;
+    transition-delay: 0.15s;
+    transition: 0;
+}
+.card {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 40px 110px rgba(0, 0, 0, 0.45);
+    overflow: hidden;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+}
+.sub-title {
+    color: #DE6262;
+    -webkit-animation: slide-in 0.75s;
+            animation: slide-in 0.75s;
+    -webkit-animation: slide-in 0.75s cubic-bezier(0.625, 0.075, 0.11, 1.165);
+            animation: slide-in 0.75s cubic-bezier(0.625, 0.075, 0.11, 1.165);
+    -webkit-animation-timing-function: cubic-bezier(0.625, 0.075, 0.11, 1.165);
+            animation-timing-function: cubic-bezier(0.625, 0.075, 0.11, 1.165);
+    font-size: 18px;
+    font-weight: 200;
+    margin:10px 0 5px 0;
+}
+.title {
+    color: #333741;
+    -webkit-animation: slide-in-slow 0.75s;
+            animation: slide-in-slow 0.75s;
+    -webkit-animation: slide-in-slow 0.75s cubic-bezier(0.625, 0.075, 0.11, 1.165);
+            animation: slide-in-slow 0.75s cubic-bezier(0.625, 0.075, 0.11, 1.165);
+    -webkit-animation-timing-function: cubic-bezier(0.625, 0.075, 0.11, 1.165);
+            animation-timing-function: cubic-bezier(0.625, 0.075, 0.11, 1.165);
+    font-size: 30px;
+    font-weight: 600;
+    margin: 20px 0px 0px 0px;
+}
+
+@-webkit-keyframes slide-in {
+    0% {
+        transform: translate3d(-300px, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translate3d(-300px, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+@-webkit-keyframes slide-in-slow {
+    0% {
+        transform: translate3d(-300px, 0, 0);
+    }
+    20% {
+        transform: translate3d(-300px, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+@keyframes slide-in-slow {
+    0% {
+        transform: translate3d(-300px, 0, 0);
+    }
+    20% {
+        transform: translate3d(-300px, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+@-webkit-keyframes slide-in-right {
+    0% {
+        transform: translate3d(400px, 0, 0);
+    }
+    30% {
+        transform: translate3d(400px, 0, 0);
+        opacity: 0;
+    }
+    40% {
+        opacity: 0;
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+@keyframes slide-in-right {
+    0% {
+        transform: translate3d(400px, 0, 0);
+    }
+    30% {
+        transform: translate3d(400px, 0, 0);
+        opacity: 0;
+    }
+    40% {
+        opacity: 0;
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+
+/*Expiernece card switch*/
+
+
+h4{
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    color:#0c4958;
+    font-family: 'Trebuchet MS', sans-serif;
+    margin: 0px;
+}
+h1{
+    font-size: 38px;
+    font-weight: 700;
+    text-align: center;
+    color:#1097b9;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+@media(max-width:1399.98px){
+    
+}
+@media(max-width:1199.98px){
+    
+}
+@media(max-width:991.98px){
+    .card-container {
+        width: 48%;
+        margin: 5% 1%;
+    }
+}
+@media(max-width:767.98px){
+    .card-container {
+        width: 100%;
+        margin: 5% 0%;
+    }
+}
+@media(max-width:551.98px){
+    
+}
