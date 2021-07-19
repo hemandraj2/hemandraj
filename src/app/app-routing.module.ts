@@ -27,7 +27,7 @@ const routes: Routes = [
   },
   {
     path: "portfolio",
-    component: PortfolioModule
+    loadChildren: () => import('./portfolio/portfolio.module').then(m => m.PortfolioModule)
   }
 ];
 

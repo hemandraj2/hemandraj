@@ -223,38 +223,6 @@
         transform: translate3d(0, 0, 0);
     }
 }
-@-webkit-keyframes slide-in-right {
-    0% {
-        transform: translate3d(400px, 0, 0);
-    }
-    30% {
-        transform: translate3d(400px, 0, 0);
-        opacity: 0;
-    }
-    40% {
-        opacity: 0;
-    }
-    100% {
-        transform: translate3d(0, 0, 0);
-        opacity: 1;
-    }
-}
-@keyframes slide-in-right {
-    0% {
-        transform: translate3d(400px, 0, 0);
-    }
-    30% {
-        transform: translate3d(400px, 0, 0);
-        opacity: 0;
-    }
-    40% {
-        opacity: 0;
-    }
-    100% {
-        transform: translate3d(0, 0, 0);
-        opacity: 1;
-    }
-}
 
 
 /*Expiernece card switch*/
