@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { TreelistComponent } from './Components/treelist/treelist.component';
+import { ItemDataComponent } from './Components/item-data/item-data.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,10 @@ const routes: Routes = [
     path: "portfolio-home",
     component: TreelistComponent
   },
+  {
+    path: "item-data",
+    component: ItemDataComponent
+  }
 ];
 
 @NgModule({
