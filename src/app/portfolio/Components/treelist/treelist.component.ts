@@ -116,20 +116,19 @@ export class TreelistComponent implements OnInit {
         }
       }
     }
-    console.log(this.path)
   }
 
   specificTraverse(id) {
     let temp = id.toString();
     let tempArray = [];
-    let listArray = [];
+    let listArray = this.listStructure;
     for (var i = 0, len = temp.length; i < len; i += 1) {
       tempArray.push(+temp.charAt(i));
     }
-    tempArray = tempArray.reverse();
-    console.log(tempArray)
+    this.path = [];
     for (let i = 0; i < tempArray.length; i++) {
-      listArray = this.listStructure[tempArray[i]].sub_cat;
+      this.path.push({ "id": listArray[tempArray[i]-1].id, "name": listArray[tempArray[i]-1].name });
+      listArray = listArray[tempArray[i]-1].sub_cat;
     }
     this.currentList = listArray;
   }
