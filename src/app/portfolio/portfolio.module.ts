@@ -5,12 +5,14 @@ import { PortfolioRoutingModule } from './portfolio-routing.module';
 import { TreelistComponent } from './Components/treelist/treelist.component';
 import { ItemDataComponent } from './Components/item-data/item-data.component';
 
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [TreelistComponent, ItemDataComponent],
   imports: [
     CommonModule,
-    PortfolioRoutingModule
+    PortfolioRoutingModule,
+    SharedModule
   ]
 })
 
