@@ -3,10 +3,12 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="col-md-4 float-left">
-                    <h1 class="title">
-                        Name
-                    </h1>
+                <div class="col-md-6 float-left">
+                    <div class="mt-5">
+                        <div class="mobile_input">
+                            <input class="form-control" #dropdown_custom (click)="customDropdownClicked()" (change)="customDropdownChanged()"/>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

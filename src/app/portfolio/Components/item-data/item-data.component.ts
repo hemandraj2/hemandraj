@@ -12,4 +12,11 @@ export class ItemDataComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  customDropdownClicked(){
+    console.log("Dropdown Clicked");
+  }
+
+  customDropdownChanged(){
+    console.log("Dropdown Changed");
+  }
 }
