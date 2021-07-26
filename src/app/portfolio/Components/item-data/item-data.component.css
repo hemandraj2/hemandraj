@@ -19,3 +19,16 @@
     background-color: #fff4f4;
     border: 1px solid #707070;
 }
+.table_search_input{
+    background: url('../../../../assets/img/search_icon.png') no-repeat scroll 10px 0px;
+    background-size: contain;
+    width: 100%;
+    float: left;
+    padding: 0px 0px 0px 7%;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    outline: 0;
+    border: 1px solid #919191;
+    margin-bottom: 10px;
+}
