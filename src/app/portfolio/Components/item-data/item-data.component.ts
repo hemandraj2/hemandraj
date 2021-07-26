@@ -19,4 +19,8 @@ export class ItemDataComponent implements OnInit {
   customDropdownChanged(){
     console.log("Dropdown Changed");
   }
+
+  customDropdownTyped(){
+    console.log("Typed in custom Dropdown");
+  }
 }

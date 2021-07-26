@@ -6,7 +6,8 @@
                 <div class="col-md-6 float-left">
                     <div class="mt-5">
                         <div class="mobile_input">
-                            <input class="form-control" #dropdown_custom (click)="customDropdownClicked()" (change)="customDropdownChanged()"/>
+                            <input class="form-control" #dropdown_custom (click)="customDropdownClicked()"
+                                (change)="customDropdownChanged()" (input)="customDropdownTyped()"/>
                         </div>
                     </div>
                 </div>
