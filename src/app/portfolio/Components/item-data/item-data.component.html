@@ -1,19 +1,24 @@
 <app-header-common></app-header-common>
 <div class="protfolio_overview">
     <div class="container">
-        <!-- <div class="row">
+        <div class="row">
             <div class="col-md-12">
                 <div class="col-md-6 float-left">
                     <div class="mt-5">
                         <div class="mobile_input">
-                            <input class="form-control" #dropdown_custom (click)="customDropdownClicked()"
-                                (change)="customDropdownChanged()" (input)="customDropdownTyped()" />
+                            <input class="form-control" [(ngModel)]="customDropdown" #dropdown_custom
+                                (click)="customDropdownClicked()" (change)="customDropdownChanged()"
+                                (focus)="customDropdownFocused()" (input)="customDropdownTyped()"
+                                (blur)="customDropdownBlur()" />
+                            <div *ngIf="suggestionBoxActive">
+                                <p>Suggestion Box Active</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div> -->
-        <div class="row">
+        </div>
+        <!-- <div class="row">
             <div class="col-md-12">
                 <div class="col-md-12 float-left">
                     <div class="mt-5">
@@ -33,6 +38,6 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </div>

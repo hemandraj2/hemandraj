@@ -9,6 +9,8 @@ import { ResumeComponent } from './Components/resume/resume.component';
 import { HeaderComponent } from './Components/header/header.component';
 import { AboutComponent } from './Components/about/about.component';
 
+import { CommonService } from './Services/common.service';
+
 import { PortfolioModule } from './portfolio/portfolio.module';
 import { SharedModule } from './shared/shared.module';
 
@@ -26,7 +28,7 @@ import { SharedModule } from './shared/shared.module';
     PortfolioModule,
     SharedModule
   ],
-  providers: [],
+  providers: [CommonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

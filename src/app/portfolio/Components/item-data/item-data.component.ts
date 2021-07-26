@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { CommonService } from '../../../Services/common.service';
+
 @Component({
   selector: 'app-item-data',
   templateUrl: './item-data.component.html',
@@ -7,49 +9,42 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ItemDataComponent implements OnInit {
 
-  searchText;
-  tableSrachData:any = [
-    {
-      "name":"Hemand Raj",
-      "email":"hemandraj20@gmail.com",
-      "phone":"8921786200"
-    },
-    {
-      "name":"Mohan Raj",
-      "email":"mohanraj20@gmail.com",
-      "phone":"656565656"
-    },
-    {
-      "name":"Santhosh Raj",
-      "email":"santhoshraj40@gmail.com",
-      "phone":"131641263"
-    },
-    {
-      "name":"Aravind Raj",
-      "email":"aravindraj52@gmail.com",
-      "phone":"532168461"
-    },
-    {
-      "name":"Prithvi Raj",
-      "email":"prithviraj32@gmail.com",
-      "phone":"879412555"
-    }
-  ];
+  //Custom_Dropdown
+  customDropdown;
+  suggestionBoxActive: boolean = false;
 
-  constructor() { }
+  //Table_Search
+  searchText;
+  tableSrachData:any;
+
+  constructor(private service:CommonService) { }
 
   ngOnInit(): void {
+
+
+    //Table_Search
+    this.tableSrachData = this.service.getSearchTableData();
   }
 
+  //Custom_Dropdown
   customDropdownClicked(){
     console.log("Dropdown Clicked");
+    this.suggestionBoxActive = true;
   }
-
   customDropdownChanged(){
     console.log("Dropdown Changed");
+    this.suggestionBoxActive = false;
   }
-
   customDropdownTyped(){
     console.log("Typed in custom Dropdown");
+    this.suggestionBoxActive = true;
+  }
+  customDropdownFocused(){
+    console.log("Custom Dropdown Focused");
+    this.suggestionBoxActive = true;
+  }
+  customDropdownBlur(){
+    console.log("Dropdown Blured");
+    this.suggestionBoxActive = false;
   }
 }
