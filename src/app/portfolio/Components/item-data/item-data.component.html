@@ -9,7 +9,10 @@
                                 (click)="multiDropdownClicked()" (change)="multiDropdownChanged()"
                                 (focus)="multiDropdownFocused()" (input)="multiDropdownTyped()"
                                 (blur)="multiDropdownInputBlur()"/>
-                            <div class="custom_dropdown_suggestion_box" [@enterAnimation] *ngIf="multiBoxActive">
+                            <div class="selectedList">
+                                <p *ngFor="let value of multiselectedValue">{{value}}</p>
+                            </div>
+                            <div class="custom_dropdown_suggestion_box" *ngIf="multiBoxActive">
                                 <p class="custom_dropdown_suggestion_item" *ngFor="let data of multidropdownDataTemp"
                                     (click)="multiItemClicked(data)">
                                     {{data}}
@@ -29,7 +32,7 @@
                                 (click)="customDropdownClicked()" (change)="customDropdownChanged()"
                                 (focus)="customDropdownFocused()" (input)="customDropdownTyped()"
                                 (blur)="customDropdownInputBlur()"/>
-                            <div class="custom_dropdown_suggestion_box" *ngIf="suggestionBoxActive">
+                            <div class="custom_dropdown_suggestion_box" [@enterAnimation] *ngIf="suggestionBoxActive">
                                 <p class="custom_dropdown_suggestion_item" *ngFor="let data of dropdownDataTemp"
                                     (click)="itemClicked(data)">
                                     {{data}}

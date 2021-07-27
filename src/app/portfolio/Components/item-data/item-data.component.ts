@@ -8,15 +8,15 @@ import { CommonService } from '../../../Services/common.service';
   animations: [
     trigger(
       'enterAnimation', [
-        transition(':enter', [
-          style({transform: 'translateY(25%)', opacity: 0}),
-          animate('200ms', style({transform: 'translateY(0)', opacity: 1}))
-        ]),
-        transition(':leave', [
-          style({transform: 'translateY(0)', opacity: 1}),
-          animate('200ms', style({transform: 'translateY(25%)', opacity: 0}))
-        ])
-      ]
+      transition(':enter', [
+        style({ transform: 'translateY(25%)', opacity: 0 }),
+        animate('200ms', style({ transform: 'translateY(0)', opacity: 1 }))
+      ]),
+      transition(':leave', [
+        style({ transform: 'translateY(0)', opacity: 1 }),
+        animate('200ms', style({ transform: 'translateY(25%)', opacity: 0 }))
+      ])
+    ]
     )
   ],
   templateUrl: './item-data.component.html',
@@ -29,7 +29,8 @@ export class ItemDataComponent implements OnInit {
   multiBoxActive: boolean = false;
   multidropdownData: string[];
   multidropdownDataTemp: string[];
-  multiselectedValue: string;
+  multiselectedValue = [];
+  lastMultiSelected: string;
 
   //Custom_Dropdown
   customDropdown: string;
@@ -112,15 +113,16 @@ export class ItemDataComponent implements OnInit {
   multiDropdownInputBlur() {
     console.log("Dropdown Input Blured");
     setTimeout(() => {
-      if (this.multiselectedValue == this.multiDropdown) {
+      if (this.lastMultiSelected == this.multiDropdown) {
         this.multiBoxActive = false;
       }
     }, 500);
   }
   multiItemClicked(data) {
     console.log("Item Clicked");
-    this.multiDropdown = data;
-    this.multiselectedValue = data
+    this.multiDropdown = "";
+    this.lastMultiSelected = data;
+    this.multiselectedValue.push(data);
     this.multiBoxActive = false;
   }
 }
