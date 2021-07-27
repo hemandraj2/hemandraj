@@ -5,6 +5,26 @@
                 <div class="col-md-6 float-left">
                     <div class="mt-5">
                         <div class="mobile_input">
+                            <input class="form-control" [(ngModel)]="multiDropdown" #dropdown_custom
+                                (click)="multiDropdownClicked()" (change)="multiDropdownChanged()"
+                                (focus)="multiDropdownFocused()" (input)="multiDropdownTyped()"
+                                (blur)="multiDropdownInputBlur()"/>
+                            <div class="custom_dropdown_suggestion_box" *ngIf="multiBoxActive">
+                                <p class="custom_dropdown_suggestion_item" *ngFor="let data of multidropdownDataTemp"
+                                    (click)="multiItemClicked(data)">
+                                    {{data}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-6 float-left">
+                    <div class="mt-5">
+                        <div class="mobile_input">
                             <input class="form-control" [(ngModel)]="customDropdown" #dropdown_custom
                                 (click)="customDropdownClicked()" (change)="customDropdownChanged()"
                                 (focus)="customDropdownFocused()" (input)="customDropdownTyped()"
@@ -19,7 +39,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- <div class="row">
             <div class="col-md-12">
                 <div class="col-md-12 float-left">
