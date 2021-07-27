@@ -15,3 +15,17 @@ body{
         background-image: url('./assets/img/hemand-background-mobile.jpg');
     }
 }
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 12px;
+    background: #f1f1f1; 
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 12px;
+    background: #ff8888; 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #ff4545; 
+}

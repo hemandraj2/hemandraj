@@ -1,4 +1,3 @@
-<app-header-common></app-header-common>
 <div class="protfolio_overview">
     <div class="container">
         <div class="row">
@@ -9,9 +8,12 @@
                             <input class="form-control" [(ngModel)]="customDropdown" #dropdown_custom
                                 (click)="customDropdownClicked()" (change)="customDropdownChanged()"
                                 (focus)="customDropdownFocused()" (input)="customDropdownTyped()"
-                                (blur)="customDropdownBlur()" />
-                            <div *ngIf="suggestionBoxActive">
-                                <p>Suggestion Box Active</p>
+                                (blur)="customDropdownInputBlur()"/>
+                            <div class="custom_dropdown_suggestion_box" *ngIf="suggestionBoxActive">
+                                <p class="custom_dropdown_suggestion_item" *ngFor="let data of dropdownDataTemp"
+                                    (click)="itemClicked(data)">
+                                    {{data}}
+                                </p>
                             </div>
                         </div>
                     </div>

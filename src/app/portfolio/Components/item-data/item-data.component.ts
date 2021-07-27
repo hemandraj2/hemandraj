@@ -10,41 +10,58 @@ import { CommonService } from '../../../Services/common.service';
 export class ItemDataComponent implements OnInit {
 
   //Custom_Dropdown
-  customDropdown;
+  customDropdown: string;
   suggestionBoxActive: boolean = false;
+  dropdownData: string[];
+  dropdownDataTemp: string[];
+  selectedValue: string;
 
   //Table_Search
   searchText;
-  tableSrachData:any;
+  tableSrachData: any;
 
-  constructor(private service:CommonService) { }
+  constructor(private service: CommonService) { }
 
   ngOnInit(): void {
 
+    //Custom_Dropdown
+    this.dropdownData = this.service.getDropDownData();
+    this.dropdownDataTemp = this.dropdownData;
 
     //Table_Search
     this.tableSrachData = this.service.getSearchTableData();
   }
 
   //Custom_Dropdown
-  customDropdownClicked(){
+  customDropdownClicked() {
     console.log("Dropdown Clicked");
     this.suggestionBoxActive = true;
   }
-  customDropdownChanged(){
+  customDropdownChanged() {
     console.log("Dropdown Changed");
     this.suggestionBoxActive = false;
   }
-  customDropdownTyped(){
+  customDropdownTyped() {
     console.log("Typed in custom Dropdown");
+    this.dropdownDataTemp = this.dropdownData.filter(a => ((a.toUpperCase()).includes(this.customDropdown.toUpperCase())));
     this.suggestionBoxActive = true;
   }
-  customDropdownFocused(){
+  customDropdownFocused() {
     console.log("Custom Dropdown Focused");
     this.suggestionBoxActive = true;
   }
-  customDropdownBlur(){
-    console.log("Dropdown Blured");
+  customDropdownInputBlur() {
+    console.log("Dropdown Input Blured");
+    setTimeout(() => {
+      if (this.selectedValue == this.customDropdown) {
+        this.suggestionBoxActive = false;
+      }
+    }, 500);
+  }
+  itemClicked(data) {
+    console.log("Item Clicked");
+    this.customDropdown = data;
+    this.selectedValue = data
     this.suggestionBoxActive = false;
   }
 }

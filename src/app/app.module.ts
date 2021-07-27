@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './Components/home/home.component';
 import { ResumeComponent } from './Components/resume/resume.component';
 import { HeaderComponent } from './Components/header/header.component';
+import { HeaderCommonComponent } from './Components/header-common/header-common.component';
 import { AboutComponent } from './Components/about/about.component';
 
 import { CommonService } from './Services/common.service';
@@ -20,7 +21,8 @@ import { SharedModule } from './shared/shared.module';
     HomeComponent,
     ResumeComponent,
     HeaderComponent,
-    AboutComponent
+    AboutComponent,
+    HeaderCommonComponent
   ],
   imports: [
     BrowserModule,

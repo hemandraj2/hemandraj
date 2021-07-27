@@ -7,6 +7,10 @@ export class CommonService {
 
   constructor() { }
 
+  getDropDownData(){
+    return ["HARI","GOPI","MOHAN","SAM","SANTHOSH","DEEPAK","SAJEEV","ABHIJITH","VIVEK","ANANTHU","MANOJ","RAM","ABHISHEK","ARAVIND","SHYAM","VISHAL","ARJUN"];
+  }
+
   getSearchTableData(){
     return [
       {
