@@ -9,7 +9,7 @@
                                 (click)="multiDropdownClicked()" (change)="multiDropdownChanged()"
                                 (focus)="multiDropdownFocused()" (input)="multiDropdownTyped()"
                                 (blur)="multiDropdownInputBlur()"/>
-                            <div class="custom_dropdown_suggestion_box" *ngIf="multiBoxActive">
+                            <div class="custom_dropdown_suggestion_box" [@enterAnimation] *ngIf="multiBoxActive">
                                 <p class="custom_dropdown_suggestion_item" *ngFor="let data of multidropdownDataTemp"
                                     (click)="multiItemClicked(data)">
                                     {{data}}

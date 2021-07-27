@@ -1,9 +1,24 @@
 import { Component, OnInit } from '@angular/core';
+import { trigger, style, animate, transition } from '@angular/animations';
 
 import { CommonService } from '../../../Services/common.service';
 
 @Component({
   selector: 'app-item-data',
+  animations: [
+    trigger(
+      'enterAnimation', [
+        transition(':enter', [
+          style({transform: 'translateY(25%)', opacity: 0}),
+          animate('200ms', style({transform: 'translateY(0)', opacity: 1}))
+        ]),
+        transition(':leave', [
+          style({transform: 'translateY(0)', opacity: 1}),
+          animate('200ms', style({transform: 'translateY(25%)', opacity: 0}))
+        ])
+      ]
+    )
+  ],
   templateUrl: './item-data.component.html',
   styleUrls: ['./item-data.component.css']
 })
